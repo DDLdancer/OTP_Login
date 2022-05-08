@@ -7,4 +7,4 @@ source "$BASEDIR/$SERVER.param"
 
 TOTP=$(python3 $BASEDIR/mintotp.py $TOTP_KEY)
 
-expect "$BASEDIR/wmlogin.exp" "$SERVER" "$PASSWD" "$TOTP"
+expect "$BASEDIR/login.exp" "$SERVER" "$PASSWD" "$TOTP"
