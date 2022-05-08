@@ -9,6 +9,6 @@ set TOTP [lindex $argv 2]
 spawn ssh $SERVER
 expect "Password:"
 send -- "$PASSWD\n"
-expect "Your Verification code(More details please visit https://hpc.pku.edu.cn):"
+expect "Your Verification code*"
 send -- "$TOTP\n"
 interact
