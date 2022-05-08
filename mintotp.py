@@ -21,7 +21,7 @@ def totp(key, time_step=30, digits=6, digest='sha1'):
 
 
 def main():
-    print(totp('BGSKMQ2AWCUYK2XUVBN7M2KR5U'))
+    print(totp(sys.argv[1]))
 
 if __name__ == '__main__':
     main()
