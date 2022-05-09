@@ -11,4 +11,7 @@ command to login
 replace `{server}` with your server info  
 
 ## Requirement
-`Python3` and [expect](https://manned.org/expect)
+**Python3** and **[expect](https://manned.org/expect)**  
+
+## Dependency
+**mintotp.py** came from **[susam/mintotp](https://github.com/susam/mintotp)**  
