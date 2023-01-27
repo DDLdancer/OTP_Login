@@ -1,14 +1,12 @@
 #!/usr/bin/env expect -f
 
-set timeout 5
+set timeout 10
 
 set SERVER [lindex $argv 0]
 set PASSWD [lindex $argv 1]
 set TOTP [lindex $argv 2]
 
 spawn ssh $SERVER
-expect "Password:"
-send -- "$PASSWD\n"
-expect "Your Verification code*"
-send -- "$TOTP\n"
+expect "Password + OTP:"
+send -- "$PASSWD$TOTP\n"
 interact
