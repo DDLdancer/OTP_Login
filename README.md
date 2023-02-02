@@ -1,18 +1,21 @@
 # OTP_Login
 > Automatic ssh authentication script with TOTP key and password fill in
 
-## Usage 
-Put your password and TOTP key in **{server}.param** like **param.example**  
-Use  
+## Configuration
+### 1. Configure the serve info in `~/.ssh/config` [[Tutorial]](https://linuxize.com/post/using-the-ssh-config-file/#ssh-config-file-example)
+`{{server}}` is the name you use in `Host {{server}}`.
+
+### 2. Put your password and TOTP key in `{{server}}.key` like `example.key`    
+
+## Usage  
 ```shell
-./login.sh {server} [-k]
+./login.sh {{server}} [-k]
 ```  
-command to login  
-**-k** option will only print TOTP key  
-replace `{server}` with your server info  
+**-k** option will only print the key for logging in    
+replace `{{server}}` with your server name  
 
 ## Requirement
 **Python3** and **[expect](https://manned.org/expect)**  
 
-## Dependency
-**mintotp.py** came from **[susam/mintotp](https://github.com/susam/mintotp)**  
+## Credit
+**mintotp.py**'s code come from **[susam/mintotp](https://github.com/susam/mintotp)**  
