@@ -22,7 +22,7 @@ source "$BASEDIR/$SERVER.param"
 TOTP=$(python3 "$BASEDIR"/mintotp.py "$TOTP_KEY")
 
 if [ "$k" = true ] ; then
-	echo "$TOTP"
+	echo "$PASSWD$TOTP"
 else
 	expect "$BASEDIR/login.exp" "$SERVER" "$PASSWD" "$TOTP"
 fi
