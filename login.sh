@@ -16,7 +16,7 @@ done
 
 BASEDIR=$(dirname "$0")
 SERVER="$1" # Server name is always the first argument
-source "$BASEDIR/$SERVER.param"
+source "$BASEDIR/$SERVER.key"
 
 # Get TOTP key
 TOTP=$(python3 "$BASEDIR"/mintotp.py "$TOTP_KEY")
