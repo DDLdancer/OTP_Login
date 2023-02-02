@@ -5,7 +5,9 @@
 ### 1. Configure the serve info in `~/.ssh/config` [[Tutorial]](https://linuxize.com/post/using-the-ssh-config-file/#ssh-config-file-example)
 `{{server}}` is the name you use in `Host {{server}}`.
 
-### 2. Put your password and TOTP key in `{{server}}.key` like `example.key`    
+### 2. Put your password and TOTP secret in `{{server}}.key` like `example.key`  
+For `otpauth://totp/Example:alice@google.com?secret=JBSWY3DPEHPK3PXP&issuer=Example`  
+TOTP key is `JBSWY3DPEHPK3PXP` located after `secret=`  
 
 ## Usage  
 ```shell
